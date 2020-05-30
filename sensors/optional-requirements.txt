@@ -1,0 +1,28 @@
+bernhard
+bottle
+cassandra-driver
+couchdb
+docker>=2.0.0
+elasticsearch
+influxdb
+kafka-python
+netifaces
+py3nvml; python_version >= "3.0"
+paho-mqtt
+pika
+potsdb
+prometheus_client
+py-cpuinfo
+pygal
+pymdstat
+pysnmp
+pySMART.smartx
+pystache
+pyzmq
+requests
+scandir; python_version < "3.5"
+sparklines
+statsd
+wifi
+zeroconf==0.19.1; python_version < "3.0"
+zeroconf; python_version >= "3.0"

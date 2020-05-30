@@ -1,0 +1,34 @@
+language: python
+
+cache: pip
+
+python:
+  - '2.7'
+  - '3.4'
+  - '3.5'
+  - '3.6'
+  - '3.7'
+  - '3.8'
+  - pypy3
+
+install:
+  - pip install -r requirements.txt
+  - pip install coveralls
+
+script:
+  - pip install .
+  - coverage run --source=glances unitest.py
+
+after_success:
+  - coveralls
+
+deploy:
+  provider: pypi
+  user: nicolargo
+  password:
+    secure: Fms23jiiKKq6qJMsZYrmBz5mC753VGrjCxzVrsioENfH3KaFf6kUc9fTYntaLvjLPTNBkU3R2IORfVOikJKmNWqWVZOdJ/nq8zPl6o9MgdNcX7qWTvY8Fi9MW7tIZHrehhm0LvWFVq8ZSc8iYzw3/741lvBh8vpJZSQs3sq/1QI=
+  on:
+    tags: true
+    branch: master
+    distributions: sdist bdist_wheel
+    repo: nicolargo/glances
