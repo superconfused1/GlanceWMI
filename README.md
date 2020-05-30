@@ -1,4 +1,4 @@
-# Glance
+# GlanceWMI
 
 Originally sourced from: https://github.com/nicolargo/glances
 ... and modified to pull WMI information about CPU and GPU temperatures via a manually created sensor since the Python sensors package does not natively support CPU and GPU temperatures in Windows.
